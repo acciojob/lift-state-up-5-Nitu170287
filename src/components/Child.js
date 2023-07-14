@@ -5,13 +5,13 @@ const Child = (props)=>{
         <div>
             
             {
-                props.isLoggedIn == true ? (<p>You are logged in!</p>) : (<div><label>Username: </label>
+                props.isLoggedIn == true ? (<p>You are logged in!</p>) : (<form onSubmit={props.logInBtnClick}><label>Username: </label>
             <input type="text" ></input><br/><br/>
 
             <label>Password: </label>
             <input type="text"></input><br/><br/>
 
-            <button onClick={props.logInBtnClick}>Login</button></div>)
+            <button>Login</button></form>)
             }
         </div>
     )
